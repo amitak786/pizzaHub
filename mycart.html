@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .sidenav{
+		   font-family: 'Lobster', cursive;
+		 
+            height:100%;
+            width:13%;
+            position: fixed;
+            background-color: white;
+            padding-top: 0px;
+			opacity:70%;
+        }
+        .sidenav a
+        {
+            padding: 16px 8px 8px 18px;
+            font-size: 20px;
+            text-decoration: none;
+			border:2px solid black;
+			border-radius:7px;
+            color: black;
+            display: block;
+        }
+        .sidenav a:hover{
+            background-color:grey;
+        }
+         a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ a.active {
+  background-color:dimgrey;
+  color: white;
+  
+}
+
+ a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+        body{
+            background-color:burlywood;
+        }
+        .cart-page{
+            margin-left: 5% ;
+        }
+        .table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart-info{
+            display: flex;
+            flex-wrap: wrap;
+			margin-left: 4%;
+        }
+        th{
+            text-align: left;
+            padding: 5px;
+            color: white;
+            background: black;
+            font-weight: normal;
+        }
+        td{
+            padding: 10px 5px;
+        }
+        td input{
+            width:50px;
+            height: 30px;
+            padding:5px;
+        }
+        td a{
+            color: black;
+            font-size: 15px;
+        }
+        td img{
+            width: 165px;
+            height: 165px;
+            margin-right: 10px;
+        }
+        .total-price{
+            display: flex;
+            justify-content:center;
+			padding-left:43%;
+        }
+        .total-price table{
+            border-top:3px solid black;
+            width: 100%;
+            max-width: 400px;
+        }
+        td:last-child{
+            text-align:justify-all;
+        }
+        th:last-child{
+            text-align: justify-all;
+        }
+		button{
+		margin-right:5%;
+		width: 113px;
+		}
+    </style>
+    </head>
+    <body>
+        
+            <div class="sidenav">
+                <a href="home.html" >Home</a>
+                <a href="userprofile1.jsp">My profile</a>
+                <a href="billing.jsp">My orders</a>
+                <a class="active" href="#" >My cart</a>
+                <a href="changepwd.jsp" >Change password</a>
+                <a href="logout.jsp" >Logout</a>
+            </div>
+       
+        <center>
+            <h1>Cart</h1>
+            <div class="small-container cart-page">
+                <table>
+                    <tr class="abc">
+                        <th><center>Product</center></th>
+                        <th>Quantity</th>
+                        <th><th>
+                    </tr>
+                    <tr>
+                        <td width="80%">
+                            <div class="cart-info">
+                                <img src="paneer_pepperoni.jpg">
+                                <div>
+                                    <p><b>Paneer Pepperoni</b><br>Size-Medium</p><p>Delightful combination of spicy red peprika,capsicum and paneer<br><small>$249</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="margherita.jpg">
+                                <div>
+                                    <p><b>Margherita</b><br>Size-Medium<br></p><p>Classic pizza loaded with 100% moziralla cheese<br><small>$499</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="paneer_mankhani.jpg">
+                                <div>
+                                    <p><b>Paneer Makhani Supreme</b><br>Size-Medium<br></p><p>supreme combination of makhani sauce,panneer,onion and capsicum<br><small>$349</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                         <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="cheesy_tomato.jpg">
+                                <div><p><b>Cheesy Tomato n Onion</b><br>Size-large<br></p><p>Delightful combination of onion and juicy tomato<br><small>$499</small></p>
+                                <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="mushroom.jpg">
+                                <div>
+                                    <p><b>Mashroom Paradise</b><br>Size-Medium<br></p><p>Loaded with 2 types of cheese and garlic herb sauteed mushrooms<br><small>$399</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                         <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="baby_corn.jpg">
+                                <div>
+                                    <p><b>Baby Corn</b><br>Size-Medium<br></p><p>Owesome combination of baby corn,cheese,onion and capsicum<br> <small>$299</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="red_pepper.jpg">
+                                <div><p><b>Redpepper n Sweet Corn Pizza</b><br>Size-large<br></p><p>Flavorful twist with the sweet corn and spicy red pepper<br><small>$549</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="pesto.jpg">
+                                <div>
+                                    <p><b>Pesto Pepperoni n Mashroon</b><br>Size-Large<br></p><p>combo of pesto n moziralla sauce topped with mashroom redpepper n onion<br><small>$599</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                            </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="cheesy_chicken.jpg">
+                                <div><p><b>Cheesy Chicken Delight</b><br></p><p>Size-Medium<br>Barbecue chicken,sweet corn and extra cheese<br><small>$499</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                        </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="jalapeno.jpg">
+                                <div>
+                                    <p><b>Mutton n Jalapeno</b><br>Size-Large<br>Delicious Mutton with the topping of Jalapeno<br><small>$699</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="turkey.jpg">
+                                <div>
+                                    <p><b>Turkey n Mashroom</b><br>Size-Medium<br></p><p>Classic combination of Turkey and mushroom with onion and cheese<br><small>$549</small></p>
+                                    <br>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="baby_corn.jpg">
+                                <div>
+                                    <p><b>Capsium n Fish</b><br>Size-Large<br></p><p>Pizza loaded with Fish,Capsicum and spicy Red pepper<br> <small>$649</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="seafood.jpg">
+                                <div>
+                                    <p><b>Seafood Marinara</b><br>Size-Large<br></p><p>Delightful combination of Marinara sauce and moziralla sauce with Tune Fish<br><small>$699</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="tuna.jpg">
+                                <div>
+                                    <p><b>Tuna n Tomato</b><br>Size-Medium<br></p><p>Pizza with the toppings of tomato and loaded with Tuna fish<br> <small>$499</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                         <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="peri.jpg">
+                                <div>
+                                    <p><b>Peri peri Chicken Garlic</b><br>Size-Large<br></p><p>Perfect trio of barbecue chicken,peri peri and Garlic<br><small>$599</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                        <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    <tr>
+                        <td width="80%">
+                            <div class="cart-info">
+                                <img src="garlic.jpg">
+                                <div>
+                                    <p><b>Garlic chilli prawn pizza</b><br>Size-Large</p><p>Prawn pizza with toppings of spicy red chilly and garlic flavour<br><small>$699</small></p>
+                                    <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                         <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="barbecue.jpg">
+                                <div><p><b>Chicken barbecue n Onion</b><br>Size-Large</p>
+                                    <p>Classic taste with the barbecue chicken topped by Onion<br><small>$599</small></p>
+                                     <a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a>
+                                        </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1" min="1" max="5"></td>
+                         <td><a class="btn btn-secondary" role="button" onclick="window.location.href='#'">Place Order</a></td>
+                    </tr>
+                </table>
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>Item:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tax:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Total:</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <a class="btn btn-primary" role="button" onclick="window.location.href='#'">Place Order</a>
+        </center>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
